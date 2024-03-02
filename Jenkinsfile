@@ -8,6 +8,13 @@ pipeline {
             }
         }
 
+
+          stage('Test') {
+            steps {
+                // Exemple : Exécution des tests
+                sh 'mvn test'
+            }
+        }
         stage('Build') {
             steps {
                 
@@ -15,11 +22,6 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                // Exemple : Exécution des tests
-                sh 'mvn test'
-            }
-        }
+      
     }
 }
